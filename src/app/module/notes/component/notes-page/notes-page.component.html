@@ -1,2 +1,15 @@
-<div>Notes</div>
-<app-notes-search (searchChanged)="handleSearchChanged($event)"></app-notes-search>
+<div>
+  <mat-card>
+    <mat-card-title>
+      <h3>Notes</h3>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <app-notes-search (searchChanged)="handleSearchChanged($event)"></app-notes-search>
+    </mat-card-subtitle>
+    <mat-card-content>
+          <div *ngFor="let note of notes$ | async">
+            {{note.title}}
+          </div>
+    </mat-card-content>
+  </mat-card>
+</div>
