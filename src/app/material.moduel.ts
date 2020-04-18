@@ -3,15 +3,22 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  imports: [ MatSidenavModule,
+  imports: [
+    MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatListModule,],
-  exports: [ MatSidenavModule,
+  exports: [MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatFormFieldModule, MatInputModule,
     MatListModule,]
 })
-export class MaterialModule { }
+export class MaterialModule {
+}
