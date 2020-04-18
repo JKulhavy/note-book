@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
+import { NgModule } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [ MatSidenavModule,
@@ -14,4 +14,4 @@ import { MatListModule } from "@angular/material/list";
     MatIconModule,
     MatListModule,]
 })
-export class MaterialModule {}
+export class MaterialModule { }
