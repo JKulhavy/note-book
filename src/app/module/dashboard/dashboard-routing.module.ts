@@ -8,6 +8,14 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
+    children: [
+      {
+        path: 'notes',
+        loadChildren: () => import('../notes/notes.module').then(m => m.NotesModule),
+        data: { preload: true },
+      },
+      { path: '**', redirectTo: '/dashboard/notes', pathMatch: 'full' },
+    ],
   },
 ];
 
@@ -15,4 +23,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {
+}
