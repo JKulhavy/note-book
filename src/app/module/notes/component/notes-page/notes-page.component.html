@@ -7,7 +7,7 @@
       <app-notes-search (searchChanged)="handleSearchChanged($event)"></app-notes-search>
     </mat-card-subtitle>
     <mat-card-content>
-          <div *ngFor="let note of notes$ | async">
+          <div *ngFor="let note of searchedNotes$ | async">
             {{note.title}}
           </div>
     </mat-card-content>
