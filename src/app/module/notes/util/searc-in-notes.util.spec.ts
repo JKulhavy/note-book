@@ -1,4 +1,4 @@
-import { SearchInNotesUtil } from "./search-in-notes.util";
+import { SearchInNotesUtil } from './search-in-notes.util';
 
 describe('Search in notes', () => {
   it('empty notes', () => {

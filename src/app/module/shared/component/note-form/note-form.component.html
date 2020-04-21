@@ -1,0 +1,16 @@
+<form *ngIf="form" (ngSubmit)="onSubmit()" [formGroup]="form" class="note-form-component">
+  <mat-form-field>
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      placeholder="Type note"
+      rows="3"
+      type="text"
+      [formControlName]="fields.title"
+    >
+    </textarea>
+    <mat-error *ngIf="form.get(fields.title).hasError('required')"> Title is required</mat-error>
+    <mat-error *ngIf="form.get(fields.title).hasError('minlength')"> Title min length are 3 characters</mat-error>
+  </mat-form-field>
+  <button color="primary" type="submit" [disabled]="!form.valid" mat-button> Save</button>
+</form>

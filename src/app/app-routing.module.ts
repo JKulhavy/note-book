@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./module/dashboard/dashboard.module').then(m => m.DashboardModule),
     data: { preload: true },
   },
-  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/dashboard/notes', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,2 +1,9 @@
-<mat-toolbar color="primary">Note Book App</mat-toolbar>
+<mat-toolbar color="primary">
+  <div class="dashboard">
+    <span>Note Book App</span>
+  <button color="accent" mat-fab (click)="handleAddNote()">
+    <mat-icon>add</mat-icon>
+  </button>
+  </div>
+</mat-toolbar>
 <router-outlet></router-outlet>

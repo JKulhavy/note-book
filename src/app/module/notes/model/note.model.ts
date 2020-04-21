@@ -1,4 +1,5 @@
-export interface NoteModel {
+import { CreateNodeModel } from '../../shared/model/create-node.model';
+
+export interface NoteModel extends CreateNodeModel{
   id: string;
-  title: string;
 }
