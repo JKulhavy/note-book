@@ -6,12 +6,12 @@ import { NoteModel } from '../model/note.model';
 import { environment } from '../../../../environments/environment';
 
 @Injectable()
-export class GetNotesService {
+export class DeleteNotesService {
   constructor(private httpClient: HttpClient) {
   }
 
-  notes$(): Observable<NoteModel[]> {
-    return this.httpClient.get<NoteModel[]>(`${environment.notesUrl}/notes`);
+  delete$(id: string): Observable<NoteModel[]> {
+    return this.httpClient.delete<NoteModel[]>(`${environment.notesUrl}/notes/${id}`);
   }
 
 }

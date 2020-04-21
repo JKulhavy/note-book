@@ -7,12 +7,15 @@ import { NotesPageComponent } from './component/notes-page/notes-page.component'
 import { NotesRoutingModule } from './notes-routing.module';
 import { NotesSearchComponent } from './component/notes-search/notes-search.component';
 import { GetNotesService } from './service/get-notes.service';
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatButtonModule } from "@angular/material/button";
+import { DeleteNotesService } from "./service/delete-notes.service";
 
 
 @NgModule({
-  imports: [MaterialModule, NotesRoutingModule, FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [MaterialModule, NotesRoutingModule, FormsModule, ReactiveFormsModule, CommonModule, MatTooltipModule, MatButtonModule],
   declarations: [NotesPageComponent, NotesSearchComponent],
-  providers: [GetNotesService]
+  providers: [GetNotesService,DeleteNotesService]
 })
 export class NotesModule {
 }

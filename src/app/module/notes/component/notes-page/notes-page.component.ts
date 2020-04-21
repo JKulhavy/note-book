@@ -5,6 +5,7 @@ import { debounceTime, map } from 'rxjs/operators';
 import { GetNotesService } from '../../service/get-notes.service';
 import { NoteModel } from '../../model/note.model';
 import { SearchInNotesUtil } from '../../util/search-in-notes.util';
+import { DeleteNotesService } from "../../service/delete-notes.service";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class NotesPageComponent {
   private notes$: Observable<NoteModel[] | undefined> = this.getNotesService.notes$();
   private search$ = new BehaviorSubject<string | undefined>(undefined);
 
-  constructor(private getNotesService: GetNotesService) {
+  constructor(private getNotesService: GetNotesService, private deleteNotesService: DeleteNotesService) {
     this.searchedNotes$ = this.getSearchNotes$();
   }
 
@@ -31,6 +32,10 @@ export class NotesPageComponent {
         debounceTime(0),
         map(([notes, search]) => SearchInNotesUtil.search(search, notes))
       );
+  }
+
+  deleteItem(id: string) {
+    this.deleteNotesService.delete$(id).subscribe();
   }
 }
 
