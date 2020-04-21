@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "note-book:build"
+            "browserTarget": "note-book:build",
+            "port": 9000
           },
           "configurations": {
             "production": {
