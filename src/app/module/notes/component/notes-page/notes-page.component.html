@@ -1,4 +1,4 @@
-<div>
+<div class="notes-page">
   <mat-card>
     <mat-card-title>
       <h3>Notes</h3>
@@ -7,20 +7,20 @@
       <app-notes-search (searchChanged)="handleSearchChanged($event)"></app-notes-search>
     </mat-card-subtitle>
     <mat-card-content>
-      <div *ngFor="let note of searchedNotes$ | async">
-        <span> {{note.title}}</span>
-        <button mat-icon-button [matTooltip]="'Open detail'">
-          <mat-icon color="primary" [inline]="true" (click)="openDetail(note.id)">launch</mat-icon>
-        </button>
-        <span>
+      <mat-card *ngFor="let note of searchedNotes$ | async" class="note-card">
+        <mat-card-content>{{note.title}}</mat-card-content>
+        <mat-card-actions class="note-card-actions">
+          <button mat-icon-button [matTooltip]="'Open detail'">
+            <mat-icon color="primary" [inline]="true" (click)="openDetail(note.id)">launch</mat-icon>
+          </button>
           <button mat-icon-button [matTooltip]="'Edit note'">
-          <mat-icon color="accent" [inline]="true" (click)="editItem(note)">edit</mat-icon>
-        </button>
-        <button mat-icon-button [matTooltip]="'Delete note'">
-          <mat-icon color="warn" [inline]="true" (click)="deleteItem(note.id)">delete</mat-icon>
-        </button>
-      </span>
-      </div>
+            <mat-icon color="accent" [inline]="true" (click)="editItem(note)">edit</mat-icon>
+          </button>
+          <button mat-icon-button [matTooltip]="'Delete note'">
+            <mat-icon color="warn" [inline]="true" (click)="deleteItem(note.id)">delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
     </mat-card-content>
   </mat-card>
 </div>

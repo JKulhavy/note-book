@@ -15,6 +15,7 @@ import { Router } from "@angular/router";
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-notes-page',
   templateUrl: './notes-page.component.html',
+  styleUrls: ['./notes-page.component.scss']
 })
 export class NotesPageComponent {
   searchedNotes$: Observable<NoteModel[] | undefined>;

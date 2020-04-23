@@ -1,0 +1,13 @@
+.notes-page {
+  margin: 40px 40px 40px 40px;
+
+  .note-card {
+    margin-bottom: 8px;
+
+    .note-card-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
