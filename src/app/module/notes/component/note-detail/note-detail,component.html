@@ -1,0 +1,9 @@
+<div class="note-detail">
+  <div class="headline">
+    <h3>Note Detail</h3>
+    <button mat-icon-button [matTooltip]="'Go back to list'">
+      <mat-icon color="primary" [inline]="true" (click)="goBack()">close</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="(note$ | async) as note">{{note.title}}</div>
+</div>

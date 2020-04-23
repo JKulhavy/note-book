@@ -8,12 +8,14 @@ import { SharedModule } from '../shared/shared.module';
 import { NotesRoutingModule } from './notes-routing.module';
 import { EditNoteComponent } from "./component/edit-note/edit-note.component";
 import { EditNoteService } from "./service/edit-note.service";
+import { NoteDetailComponent } from "./component/note-detail/note-detail.component";
+import { GetNoteService } from "./service/get-note.service";
 
 
 @NgModule({
   imports: [SharedModule, NotesRoutingModule],
-  declarations: [NotesPageComponent, NotesSearchComponent, EditNoteComponent],
-  providers: [GetNotesService, DeleteNotesService, EditNoteService]
+  declarations: [NotesPageComponent, NotesSearchComponent, EditNoteComponent, NoteDetailComponent],
+  providers: [GetNotesService, DeleteNotesService, EditNoteService, GetNoteService]
 })
 export class NotesModule {
 }

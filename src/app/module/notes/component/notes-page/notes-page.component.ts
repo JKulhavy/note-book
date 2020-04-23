@@ -8,6 +8,7 @@ import { SearchInNotesUtil } from '../../util/search-in-notes.util';
 import { DeleteNotesService } from '../../service/delete-notes.service';
 import { MatDialog } from "@angular/material/dialog";
 import { EditNoteComponent } from "../edit-note/edit-note.component";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -23,6 +24,7 @@ export class NotesPageComponent {
   constructor(
     private getNotesService: GetNotesService,
     private deleteNotesService: DeleteNotesService,
+    private router: Router,
     public dialog: MatDialog,
   ) {
     this.searchedNotes$ = this.getSearchNotes$();
@@ -36,7 +38,7 @@ export class NotesPageComponent {
     this.deleteNotesService.delete$(id).subscribe();
   }
 
-  editItem(note:NoteModel) {
+  editItem(note: NoteModel): void {
     this.dialog.open(EditNoteComponent, {
       data: note
     })
@@ -48,6 +50,10 @@ export class NotesPageComponent {
         debounceTime(0),
         map(([notes, search]) => SearchInNotesUtil.search(search, notes))
       );
+  }
+
+  openDetail(id: string): void {
+    this.router.navigate([`/dashboard/notes/${id}`])
   }
 }
 
