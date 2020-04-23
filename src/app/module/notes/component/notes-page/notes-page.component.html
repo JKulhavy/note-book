@@ -1,7 +1,7 @@
 <div class="notes-page">
   <mat-card>
     <mat-card-title>
-      <h3>Notes</h3>
+      <h3 i18n="@@notesTitle">Notes</h3>
     </mat-card-title>
     <mat-card-subtitle>
       <app-notes-search (searchChanged)="handleSearchChanged($event)"></app-notes-search>
@@ -10,13 +10,13 @@
       <mat-card *ngFor="let note of searchedNotes$ | async; trackBy: 'id' | trackByProperty" class="note-card">
         <mat-card-content>{{note.title}}</mat-card-content>
         <mat-card-actions class="note-card-actions">
-          <button mat-icon-button [matTooltip]="'Open detail'">
+          <button mat-icon-button i18n-matTooltip="@@openDetailTooltip" matTooltip='Open detail'>
             <mat-icon color="primary" [inline]="true" (click)="openDetail(note.id)">launch</mat-icon>
           </button>
-          <button mat-icon-button [matTooltip]="'Edit note'">
+          <button mat-icon-button i18n-matTooltip="@@editNoteTooltip" matTooltip="Edit note">
             <mat-icon color="accent" [inline]="true" (click)="editItem(note)">edit</mat-icon>
           </button>
-          <button mat-icon-button [matTooltip]="'Delete note'">
+          <button mat-icon-button i18n-matTooltip i18n-matTooltip="@@deleteNoteTooltip"  matTooltip="'Delete note'">
             <mat-icon color="warn" [inline]="true" (click)="deleteItem(note.id)">delete</mat-icon>
           </button>
         </mat-card-actions>

@@ -3,14 +3,18 @@
     <textarea
       matInput
       cdkTextareaAutosize
+      i18n-placeholder="@@noteFormPlaceholder"
       placeholder="Type note"
       rows="3"
       type="text"
       [formControlName]="fields.title"
     >
     </textarea>
-    <mat-error *ngIf="form.get(fields.title).hasError('required')"> Title is required</mat-error>
-    <mat-error *ngIf="form.get(fields.title).hasError('minlength')"> Title min length are 3 characters</mat-error>
+    <mat-error *ngIf="form.get(fields.title).hasError('required')" i18n="@@errorTitleIsRequired"> Title is required
+    </mat-error>
+    <mat-error *ngIf="form.get(fields.title).hasError('minlength')" i18n="@@errorTitleMinLength"> Title min length are 3
+      characters
+    </mat-error>
   </mat-form-field>
-  <button color="primary" type="submit" [disabled]="!form.valid" mat-button> Save</button>
+  <button color="primary" type="submit" [disabled]="!form.valid" mat-button i18n="@@saveButton"> Save</button>
 </form>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="cs" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="noteFormPlaceholder" datatype="html">
+        <source>Type note</source>
+        <target>Napište poznámku</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/shared/component/note-form/note-form.component.html
+          </context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorTitleIsRequired" datatype="html">
+        <source>Title is required
+        </source>
+        <target>Název je povinný
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/shared/component/note-form/note-form.component.html
+          </context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorTitleMinLength" datatype="html">
+        <source>Title min length are 3
+          characters
+        </source>
+        <target>Délka názvu je minimálně 3 znaky
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/shared/component/note-form/note-form.component.html
+          </context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saveButton" datatype="html">
+        <source>Save</source>
+        <target>Ulož
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/shared/component/note-form/note-form.component.html
+          </context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appName" datatype="html">
+        <source>Note Book App</source>
+        <target>Zápisníček</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/dashboard/component/dashboard/dashboard.component.html
+          </context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notesTitle" datatype="html">
+        <source>Notes</source>
+        <target>Poznámky</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/notes-page/notes-page.component.html
+          </context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="openDetailTooltip" datatype="html">
+        <source>Open detail</source>
+        <target>Otevřít poznámku</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/notes-page/notes-page.component.html
+          </context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="editNoteTooltip" datatype="html">
+        <source>Edit note</source>
+        <target>Editovat poznámku</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/notes-page/notes-page.component.html
+          </context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteNoteTooltip" datatype="html">
+        <source>&apos;Delete note&apos;</source>
+        <target>Smazat poznámku</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/notes-page/notes-page.component.html
+          </context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notesSearchPlaceholder" datatype="html">
+        <source>Search</source>
+        <target>Vyhledat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/notes-search/notes-search.component.html
+          </context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noteDetail" datatype="html">
+        <source>Note Detail</source>
+        <target>Detail poznámky</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/note-detail/note-detail,component.html
+          </context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goBackToListTooltip" datatype="html">
+        <source>Go back to list</source>
+        <target>Návrat na poznámky</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/module/notes/component/note-detail/note-detail,component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,4 +1,4 @@
 <mat-form-field *ngIf="form" [formGroup]="form">
   <mat-icon [inline]="true" matPrefix>search</mat-icon>
-  <input type="text" placeholder="Search" matInput name="topic search" [formControlName]="fields.search"/>
+  <input type="text" i18n-placeholder="@@notesSearchPlaceholder" placeholder="Search" matInput name="topic search" [formControlName]="fields.search"/>
 </mat-form-field>

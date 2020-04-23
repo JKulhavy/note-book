@@ -9,6 +9,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "cs": "src/locale/cs.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -44,6 +50,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "baseHref": "/en",
               "budgets": [
                 {
                   "type": "initial",
@@ -56,6 +63,13 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "cs": {
+              "localize": [
+                "cs"
+              ],
+              "baseHref": "/cs",
+              "main": "src/main.ts"
             }
           }
         },
@@ -68,6 +82,9 @@
           "configurations": {
             "production": {
               "browserTarget": "note-book:build:production"
+            },
+            "cs": {
+              "browserTarget": "note-book:build:cs"
             }
           }
         },
