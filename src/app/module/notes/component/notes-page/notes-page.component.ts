@@ -6,6 +6,8 @@ import { GetNotesService } from '../../service/get-notes.service';
 import { NoteModel } from '../../model/note.model';
 import { SearchInNotesUtil } from '../../util/search-in-notes.util';
 import { DeleteNotesService } from '../../service/delete-notes.service';
+import { MatDialog } from "@angular/material/dialog";
+import { EditNoteComponent } from "../edit-note/edit-note.component";
 
 
 @Component({
@@ -18,7 +20,11 @@ export class NotesPageComponent {
   private notes$: Observable<NoteModel[] | undefined> = this.getNotesService.notes$();
   private search$ = new BehaviorSubject<string | undefined>(undefined);
 
-  constructor(private getNotesService: GetNotesService, private deleteNotesService: DeleteNotesService) {
+  constructor(
+    private getNotesService: GetNotesService,
+    private deleteNotesService: DeleteNotesService,
+    public dialog: MatDialog,
+  ) {
     this.searchedNotes$ = this.getSearchNotes$();
   }
 
@@ -28,6 +34,12 @@ export class NotesPageComponent {
 
   deleteItem(id: string) {
     this.deleteNotesService.delete$(id).subscribe();
+  }
+
+  editItem(note:NoteModel) {
+    this.dialog.open(EditNoteComponent, {
+      data: note
+    })
   }
 
   private getSearchNotes$(): Observable<NoteModel[] | undefined> {

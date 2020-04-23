@@ -8,8 +8,15 @@
     </mat-card-subtitle>
     <mat-card-content>
       <div *ngFor="let note of searchedNotes$ | async">
-        <span> {{note.title}}</span> <span> <button mat-icon-button [matTooltip]="'Delete note'"> <mat-icon
-        color="warn" [inline]="true" (click)="deleteItem(note.id)">delete</mat-icon></button></span>
+        <span> {{note.title}}</span>
+        <span>
+          <button mat-icon-button [matTooltip]="'Edit note'">
+          <mat-icon color="accent" [inline]="true" (click)="editItem(note)">edit</mat-icon>
+        </button>
+        <button mat-icon-button [matTooltip]="'Delete note'">
+          <mat-icon color="warn" [inline]="true" (click)="deleteItem(note.id)">delete</mat-icon>
+        </button>
+      </span>
       </div>
     </mat-card-content>
   </mat-card>

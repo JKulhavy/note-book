@@ -6,12 +6,14 @@ import { GetNotesService } from './service/get-notes.service';
 import { DeleteNotesService } from './service/delete-notes.service';
 import { SharedModule } from '../shared/shared.module';
 import { NotesRoutingModule } from './notes-routing.module';
+import { EditNoteComponent } from "./component/edit-note/edit-note.component";
+import { EditNoteService } from "./service/edit-note.service";
 
 
 @NgModule({
   imports: [SharedModule, NotesRoutingModule],
-  declarations: [NotesPageComponent, NotesSearchComponent],
-  providers: [GetNotesService, DeleteNotesService]
+  declarations: [NotesPageComponent, NotesSearchComponent, EditNoteComponent],
+  providers: [GetNotesService, DeleteNotesService, EditNoteService]
 })
 export class NotesModule {
 }
