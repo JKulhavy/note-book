@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { CreateNodeModel } from '../../../shared/model/create-node.model';
-import { EditNoteService } from "../../service/edit-note.service";
-import { NoteModel } from "../../model/note.model";
+import { EditNoteService } from '../../service/edit-note.service';
+import { NoteModel } from '../../model/note.model';
 
 
 @Component({
@@ -16,7 +16,6 @@ export class EditNoteComponent {
     private editNoteService: EditNoteService,
     public dialogRef: MatDialogRef<EditNoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data: NoteModel,
-
   ) {
   }
 

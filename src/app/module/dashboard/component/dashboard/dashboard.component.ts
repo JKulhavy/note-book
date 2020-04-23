@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+
 import { AddNoteComponent } from '../add-note/add-note.component';
 
 @Component({
@@ -13,6 +14,6 @@ export class DashboardComponent {
   }
 
   handleAddNote() {
-    this.dialog.open(AddNoteComponent, { });
+    this.dialog.open(AddNoteComponent);
   }
 }

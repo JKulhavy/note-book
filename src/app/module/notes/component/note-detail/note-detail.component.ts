@@ -1,8 +1,9 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { GetNoteService } from "../../service/get-note.service";
-import { Observable } from "rxjs";
-import { NoteModel } from "../../model/note.model";
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+
+import { GetNoteService } from '../../service/get-note.service';
+import { NoteModel } from '../../model/note.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -29,6 +30,6 @@ export class NoteDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/dashboard/notes'])
+    this.router.navigate(['/dashboard/notes']);
   }
 }

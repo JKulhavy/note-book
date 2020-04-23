@@ -2,7 +2,7 @@ import { SearchInNotesUtil } from './search-in-notes.util';
 
 describe('Search in notes', () => {
   it('empty notes', () => {
-    const result = SearchInNotesUtil.search('a', undefined);
+    const result = SearchInNotesUtil.search('a',);
     expect(result).toBe(undefined);
   });
 

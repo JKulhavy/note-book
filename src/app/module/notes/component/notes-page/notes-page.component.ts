@@ -1,15 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 import { GetNotesService } from '../../service/get-notes.service';
 import { NoteModel } from '../../model/note.model';
 import { SearchInNotesUtil } from '../../util/search-in-notes.util';
 import { DeleteNotesService } from '../../service/delete-notes.service';
-import { MatDialog } from "@angular/material/dialog";
-import { EditNoteComponent } from "../edit-note/edit-note.component";
-import { Router } from "@angular/router";
-
+import { EditNoteComponent } from '../edit-note/edit-note.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -42,7 +41,11 @@ export class NotesPageComponent {
   editItem(note: NoteModel): void {
     this.dialog.open(EditNoteComponent, {
       data: note
-    })
+    });
+  }
+
+  openDetail(id: string): void {
+    this.router.navigate([`/dashboard/notes/${id}`]);
   }
 
   private getSearchNotes$(): Observable<NoteModel[] | undefined> {
@@ -51,10 +54,6 @@ export class NotesPageComponent {
         debounceTime(0),
         map(([notes, search]) => SearchInNotesUtil.search(search, notes))
       );
-  }
-
-  openDetail(id: string): void {
-    this.router.navigate([`/dashboard/notes/${id}`])
   }
 }
 
